@@ -7,7 +7,11 @@ type 'node t = <
   keyCode : int [@bs.get];
   preventDefault : unit -> unit [@bs.meth];
   stopPropagation : unit -> unit [@bs.meth];
+  pageX : int [@bs.get {undefined ; null}];
+  pageY : int [@bs.get {undefined ; null}];
 > Js.t
+
+
 
 type 'node cb = 'node t -> unit [@bs]
 
